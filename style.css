@@ -28,16 +28,15 @@ body {
   margin-top: 20px;
   border-radius: 6px;
   box-shadow: rgb(38, 57, 77) 0px 10px 20px -4px;
+  transition: 0.5s ease-in-out;
 }
 
 #battle {
-  border: 3px solid lime;
   margin-top: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 #battle-wrap {
-  border: 1px solid magenta;
   display: flex;
   justify-content: space-evenly;
 }
@@ -66,6 +65,7 @@ body {
 #choices {
   display: flex;
   justify-content: space-around;
+  transition: 1.5s ease-in-out;
 }
 
 img {
@@ -96,5 +96,26 @@ img:hover {
   }
   100% {
     transform: rotate(0.01deg) scale(1);
+  }
+}
+
+@media (min-width: 499px) {
+  #title {
+    font-size: 30px;
+    letter-spacing: 5px;
+    width: 400px;
+  }
+}
+
+@media (min-width: 750px) {
+  #choices {
+    width: 400px;
+    margin: auto;
+  }
+  #battle {
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 60px;
   }
 }
