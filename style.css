@@ -7,7 +7,15 @@ body {
   background-color: #fff;
 }
 
+#main-cont {
+  /* border: 2px solid magenta; */
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
 #title {
+  color: rgb(155, 155, 155);
   display: flex;
   justify-content: center;
   /* padding-top: 5px;
@@ -15,20 +23,34 @@ body {
   padding-left: 50px;
   padding-right: 50px; */
   font-size: 20px;
-  border: 2px solid black;
+  /* border: 2px solid rgb(155, 155, 155); */
   width: 240px;
   margin: auto;
   margin-top: 20px;
   border-radius: 6px;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  box-shadow: rgb(38, 57, 77) 0px 10px 20px -4px;
+}
+#choose {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 5px;
 }
 
 #choices {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: space-around;
 }
 
 img {
-    width: 70px;
-    height: 70px;
+  width: 70px;
+  height: 70px;
+  box-shadow: rgb(38, 57, 77) 0px 10px 20px -4px;
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+}
+
+img:hover {
+  box-shadow: none;
+  cursor: pointer;
 }
