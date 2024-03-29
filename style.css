@@ -5,6 +5,7 @@
 
 body {
   background-color: #fff;
+  color: rgb(155, 155, 155);
 }
 
 #main-cont {
@@ -18,12 +19,10 @@ body {
   color: rgb(155, 155, 155);
   display: flex;
   justify-content: center;
-  /* padding-top: 5px;
   padding-bottom: 5px;
-  padding-left: 50px;
-  padding-right: 50px; */
+  padding-top: 5px;
   font-size: 20px;
-  /* border: 2px solid rgb(155, 155, 155); */
+  letter-spacing: 3px;
   width: 240px;
   margin: auto;
   margin-top: 20px;
@@ -41,6 +40,9 @@ body {
   border: 1px solid magenta;
   display: flex;
   justify-content: space-evenly;
+}
+#fight {
+  margin-top: 35px;
 }
 
 #cpu {
@@ -77,4 +79,22 @@ img {
 img:hover {
   box-shadow: none;
   cursor: pointer;
+}
+
+.animate-1 {
+  animation-name: scaleAnimate1;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scaleAnimate1 {
+  0% {
+    transform: rotate(0.01deg) scale(1);
+  }
+  50% {
+    transform: rotate(0.01deg) scale(0.9);
+  }
+  100% {
+    transform: rotate(0.01deg) scale(1);
+  }
 }
