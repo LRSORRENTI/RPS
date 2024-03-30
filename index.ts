@@ -12,6 +12,10 @@ scissors.addEventListener('click', () => {
     console.log('clicked scissors')
 });
 
+const getPlayerChoice = () => {
+
+};
+
 
 // CPU selection:
 const getCpuChoice = (): string => {
@@ -30,3 +34,6 @@ const getCpuChoice = (): string => {
 }
 getCpuChoice();
 
+const playGame = () => {
+
+}

@@ -21,8 +21,9 @@ body {
   justify-content: center;
   padding-bottom: 5px;
   padding-top: 5px;
+  padding-left: 5px;
   font-size: 20px;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   width: 240px;
   margin: auto;
   margin-top: 20px;
@@ -102,7 +103,7 @@ img:hover {
 @media (min-width: 499px) {
   #title {
     font-size: 30px;
-    letter-spacing: 5px;
+    letter-spacing: 7px;
     width: 400px;
   }
 }
