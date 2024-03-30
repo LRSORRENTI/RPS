@@ -1,3 +1,19 @@
+const rock: HTMLElement = document.getElementById('rock')!;
+const paper: HTMLElement = document.getElementById('paper')!;
+const scissors: HTMLElement = document.getElementById('scissors')!;
+
+rock.addEventListener('click', () => {
+    console.log('clicked rock')
+})
+paper.addEventListener('click', () => {
+    console.log('clicked paper')
+})
+scissors.addEventListener('click', () => {
+    console.log('clicked scissors')
+})
+
+
+// CPU selection:
 const getCpuChoice = (): string => {
     // first get random number:
     const randNum: number = (Math.floor(Math.random() * 3) + 1);
@@ -12,6 +28,5 @@ const getCpuChoice = (): string => {
     // check through all the cases, maybe use switch 
     // statement?
 }
-
-
 getCpuChoice()
+
