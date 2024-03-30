@@ -4,13 +4,13 @@ const scissors: HTMLElement = document.getElementById('scissors')!;
 
 rock.addEventListener('click', () => {
     console.log('clicked rock')
-})
+});
 paper.addEventListener('click', () => {
     console.log('clicked paper')
-})
+});
 scissors.addEventListener('click', () => {
     console.log('clicked scissors')
-})
+});
 
 
 // CPU selection:
@@ -28,5 +28,5 @@ const getCpuChoice = (): string => {
     // check through all the cases, maybe use switch 
     // statement?
 }
-getCpuChoice()
+getCpuChoice();
 
