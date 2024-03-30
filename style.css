@@ -82,6 +82,11 @@ img:hover {
   cursor: pointer;
 }
 
+#battle img:hover {
+  box-shadow: rgb(38, 57, 77) 0px 10px 20px -4px;
+  cursor: default;
+}
+
 .animate-1 {
   animation-name: scaleAnimate1;
   animation-duration: 0.7s;
