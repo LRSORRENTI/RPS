@@ -1,48 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>Rock Paper Scissors</title>
-  </head>
-  <body>
+</head>
+<body>
     <div id="main-cont">
-      <h1 id="title">rock paper scissors</h1>
-      <div id="battle">
-        <div id="battle-wrap">
-          <div id="cpu">
-            <p>player</p>
-            <img
-              src="./imgs/question.png"
-              alt="default player2"
-              class="animate-1"
-             
-            />
-          </div>
-          <p id="fight">FIGHT!</p>
-          <div id="cpu">
-            <p>cpu</p>
-            <img
-              src="./imgs/question.png"
-              alt="default player2"
-              class="animate-1"
-            />
-          </div>
-        </div>
-        <div></div>
-      </div>
-      <p id="choose">choose</p>
-      <div id="choices">
-        <img src="./imgs/rock.png" alt="an image of a rock" id="rock" />
-        <img src="./imgs/paper.png" alt="an image of paper" id="paper" />
-        <img
-          src="./imgs/scissors.png"
-          alt="an image of scissors"
-          id="scissors"
-        />
-      </div>
+        <h1 id="title">Rock Paper Scissors</h1>
+        <section id="battle">
+            <div id="battle-wrap">
+                <div id="player">
+                    <p>Player</p>
+                    <!-- <img src="./imgs/question.png" alt="default player" class="animate-1" /> -->
+                    <img src="./imgs/question.png" alt="default player" class="animate-1" id="playerChoiceImage" />
+                  </div>
+                <p id="fight">FIGHT!</p>
+                <div id="cpu">
+                    <p>CPU</p>
+                    <!-- <img src="./imgs/question.png" alt="default CPU" class="animate-1" /> -->
+                   <img src="./imgs/question.png" alt="default CPU" class="animate-1" id="cpuChoiceImage" />
+                  </div>
+            </div>
+        </section>
+        <p id="choose">Choose</p>
+        <section id="choices">
+            <img src="./imgs/rock.png" alt="an image of a rock" id="rock" />
+            <img src="./imgs/paper.png" alt="an image of paper" id="paper" />
+            <img src="./imgs/scissors.png" alt="an image of scissors" id="scissors" />
+        </section>
     </div>
     <script src="./js/index.js"></script>
-  </body>
+</body>
 </html>

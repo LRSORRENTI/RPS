@@ -4,8 +4,12 @@ const scissors: HTMLElement = document.getElementById('scissors')!;
 
 let playerChoice: string = '';
 
+const playerChoiceImage = document.getElementById('playerChoiceImage') as HTMLImageElement;
+const cpuChoiceImage = document.getElementById('cpuChoiceImage') as HTMLImageElement;
+
 const getPlayerChoice = (choice: string) => {
     playerChoice = choice;
+    playerChoiceImage!.src = `./imgs/${choice}.png`;
     console.log(`Player choice is ${choice}`)
     playGame();
 };
@@ -29,22 +33,44 @@ scissors.addEventListener('click', () => {
 
 // CPU selection:
 const getCpuChoice = (): string => {
-    // first get random number:
-    const randNum: number = (Math.floor(Math.random() * 3) + 1);
-    // console.log(randNum)
-    // initiate finalchoice var
-    let finalChoice: string;
-    randNum === 1 ? finalChoice = 'rock' :
-    randNum === 2 ? finalChoice = 'paper' :
-    finalChoice = 'scissors'
-    console.log(finalChoice)
-    return finalChoice;
-    // check through all the cases, maybe use switch 
-    // statement?
+    const choices = ['rock', 'paper', 'scissors'];
+    const randIndex = Math.floor(Math.random() * choices.length);
+    const cpuChoice = choices[randIndex];
+    cpuChoiceImage!.src = `./imgs/${cpuChoice}.png`; // Update CPU's choice image
+    console.log(`CPU chose: ${cpuChoice}`);
+    return cpuChoice;
 }
 
+interface OutcomeMap {
+    [key: string]: {
+        [key: string]: string
+    };
+};
+
+const outcomes: OutcomeMap = {
+    'rock': {
+        'rock': 'Game is a tie!',
+        'paper': 'CPU wins!',
+        'scissors': 'Player wins!'
+    },
+    'paper': {
+        'rock': 'Player wins!',
+        'paper': 'Game is a tie!',
+        'scissors': 'CPU wins!'
+    },
+    'scissors': {
+        'rock': 'CPU wins!',
+        'paper': 'Player wins!',
+        'scissors': 'Game is a tie!'
+    }
+};
 
 const playGame = () => {
     const cpuChoice = getCpuChoice();
-    
+    const result = outcomes[playerChoice][cpuChoice];
+    console.log(`CPU choice ${cpuChoice}, player choice ${playerChoice}`);
+    setTimeout(() => {
+        alert(result);
+      }, "1000" as any);
+
 }
