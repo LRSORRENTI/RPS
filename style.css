@@ -6,6 +6,7 @@
 body {
   background-color: #fff;
   color: rgb(155, 155, 155);
+  font-family: sans-serif;
 }
 
 #main-cont {
@@ -22,7 +23,7 @@ body {
   padding-bottom: 5px;
   padding-top: 5px;
   padding-left: 5px;
-  font-size: 17px;
+  font-size: 14px;
   letter-spacing: 5px;
   width: 240px;
   margin: auto;
@@ -51,6 +52,11 @@ body {
 }
 
 #cpu p {
+  display: flex;
+  justify-content: center;
+}
+
+#player p {
   display: flex;
   justify-content: center;
 }
@@ -108,7 +114,7 @@ img:hover {
 
 @media (min-width: 499px) {
   #title {
-    font-size: 30px;
+    font-size: 26px;
     letter-spacing: 7px;
     width: 400px;
   }
